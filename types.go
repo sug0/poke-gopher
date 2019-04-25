@@ -2,7 +2,7 @@ package pokemon
 
 import "unsafe"
 
-func TypeDamageMultiplier(t1, t2 Type) float64 {
+func TypeDamageMultiplier(t1, t2 Type) float32 {
     typeCombo := typesToUint16([2]Type{t1, t2})
     if damage, ok := damageMultipliers[typeCombo]; ok {
         return damage
@@ -15,7 +15,7 @@ func typesToUint16(types [2]Type) uint16 {
 }
 
 // Auto generated.
-var damageMultipliers = map[uint16]float64{
+var damageMultipliers = map[uint16]float32{
 	3841: 0.0,
 	2817: 0.5,
 	4353: 0.5,
